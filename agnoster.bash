@@ -211,6 +211,10 @@ prompt_virtualenv() {
         color=cyan
         prompt_segment $color $PRIMARY_FG
         prompt_segment $color white "$(basename $VIRTUAL_ENV)"
+    elif [[ -n $CONDA_DEFAULT_ENV ]]; then
+        color=cyan
+        prompt_segment $color $PRIMARY_FG
+        prompt_segment $color white "$CONDA_DEFAULT_ENV"
     fi
 }
 
